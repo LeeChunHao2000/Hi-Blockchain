@@ -1,0 +1,10 @@
+
+flask
+numpy
+pandas
+pyimgur
+gunicorn
+requests
+matplotlib
+mplfinance
+line-bot-sdk
