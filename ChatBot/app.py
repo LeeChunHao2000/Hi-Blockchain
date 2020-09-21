@@ -61,8 +61,20 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     text = event.message.text
-    user_id = event.source.user_id
     # ================================
+    if re.match('^美金訂單簿$', text):
+            flex_message = flex_usdt_orderbook()
+            line_bot_api.reply_message(event.reply_token, flex_message)
+            
+    elif re.match('^台幣訂單簿$', text) or re.match('^臺幣訂單簿$', text):
+        flex_message = flex_twd_orderbook()
+        line_bot_api.reply_message(event.reply_token, flex_message)
+
+    elif re.match('K線', text):
+        a, pair = text.lower().split(' ')
+        img_message = img_klines(client, pair)
+        line_bot_api.reply_message(event.reply_token, img_message)
+
 
 if __name__ == "__main__":
     app.run()
