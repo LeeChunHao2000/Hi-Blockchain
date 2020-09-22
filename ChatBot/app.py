@@ -72,11 +72,13 @@ def handle_message(event):
         flex_message = flex_twd_orderbook()
         line_bot_api.reply_message(event.reply_token, flex_message)
 
+    # ================================
     elif re.match('K線', text.upper()):
         a, pair = text.lower().split(' ')
         img_message = img_klines(client, pair)
         line_bot_api.reply_message(event.reply_token, img_message)
-    
+        
+    # ================================
     elif re.match('GAS', text.upper()):
         text_message = text_gas()
         line_bot_api.reply_message(event.reply_token, text_message)
