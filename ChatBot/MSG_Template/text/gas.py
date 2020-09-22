@@ -10,7 +10,7 @@ def text_gas():
         print ('Error! problem is {}'.format(e.args[0]))
     safeLow, average, fast= data['safeLow']/10, data['average']/10, data['fast']/10
     return TextSendMessage(
-            text = f'| Grenade Bot |\n\n'
+            text = f'| Hi BlockChain |\n\n'
             f'慢速 (<30m) => {safeLow}\n'
             f'中等 (<5m) => {average}\n'
             f'快速 (<2m) => {fast}\n\n'
