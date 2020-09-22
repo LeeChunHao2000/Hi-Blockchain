@@ -17,6 +17,7 @@ from API_Package.max.client import *
 
 from MSG_Template.flex.orderbook import *
 from MSG_Template.image.kline import *
+from MSG_Template.text.gas import *
 
 # 全域變數
 app = Flask(__name__)
@@ -74,6 +75,10 @@ def handle_message(event):
         a, pair = text.lower().split(' ')
         img_message = img_klines(client, pair)
         line_bot_api.reply_message(event.reply_token, img_message)
+    
+    elif re.match('GAS', text.upper()):
+        text_message = text_gas()
+        line_bot_api.reply_message(event.reply_token, text_message)
 
 if __name__ == "__main__":
     app.run()
