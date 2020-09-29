@@ -19,16 +19,16 @@
 
 ## Tree
 
-    │  app.py
-    │  Procfile
-    │  requirements.txt
+    │  app.py # Flask 框架，用於 Message API Webhook
+    │  Procfile # Heroku 設定
+    │  requirements.txt # Python 套件
     │
-    ├─.fonts
+    ├─.fonts # 字體
     │      msyh.ttc
     │      msyhbd.ttc
     │      msyhl.ttc
     │
-    ├─API_Package
+    ├─API_Package # 各大交易所 API 封裝
     │  ├─FTX
     │  │      client.py
     │  │      constants.py
@@ -41,21 +41,21 @@
     │          helpers.py
     │          __init__.py
     │
-    ├─MSG_Template
+    ├─MSG_Template # 訊息模板
     │  ├─flex
-    │  │      orderbook.py
+    │  │      orderbook.py # 訂單簿
     │  │
     │  ├─image
-    │  │      btcvix.py
-    │  │      kline.py
+    │  │      btcvix.py # 恐慌指數圖
+    │  │      kline.py # K線
     │  │
     │  └─text
-    │          address.py
-    │          btcvix.py
-    │          coin.py
-    │          gas.py
-    │          index.py
-    │          usdt.py
+    │          address.py # 乙太坊、比特幣地址查詢
+    │          btcvix.py # 恐慌指數
+    │          coin.py # 查詢幣價
+    │          gas.py # Gas 平均價格
+    │          index.py # 指標運算
+    │          usdt.py # USDT 匯率
     │
     ├─static
     │  ├─css
