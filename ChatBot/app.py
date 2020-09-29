@@ -31,7 +31,7 @@ from MSG_Template.text.address import *
 app = Flask(__name__)
 # 基本設定
 line_bot_api = LineBotApi(
-    'fxd8HPifCKjpGVCC6xMLkb1XZjkte0iFkEMXgbaZ7vY3K49qMprpRSR2fdr3Ez3dJ61ytRQ7Z/yQne2yugEAMUWtNmt8FhMpcO0sc6Dm9xBfAO1uym20V3RcDPSC0NaBaBkRWbxRkFpNC8SLtFSYIQdB04t89/1O/w1cDnyilFU=')
+    'Put_My_API')
 handler = WebhookHandler('99f277290ebf0a849f4d4b32ae3d192b')
 
 # Pandas 設定
